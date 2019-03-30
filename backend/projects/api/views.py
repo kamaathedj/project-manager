@@ -4,7 +4,7 @@ from projects.models import projects
 
 
 class projectListView(ListAPIView):
-    queryset=projects.objects.order_by('id')
+    queryset=projects.objects.order_by('-id')
     serializer_class=projectSerializer
 
 

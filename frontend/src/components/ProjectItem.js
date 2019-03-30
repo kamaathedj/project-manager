@@ -15,7 +15,7 @@ class ProjectItem extends Component {
     return (
       <List className="projects" grid={{gutter: 25,column: 4}} >
       <List.Item>
-         <Card style={{marginRight:20,borderShadow:100}}>
+         <Card style={{marginRight:20}}>
            
             <Meta
             title={this.props.project.title}
