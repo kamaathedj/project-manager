@@ -10,7 +10,7 @@ class ProjectItem extends Component {
       message.info(`we are currently working hard to bring this functionality!`,[3])
     }
     const doneButton=()=>{
-      message.success(`${this.props.project.title} is completed!`,[3])
+      message.success(`${this.props.project.title} is completed!`,[2])
     }
     return (
       <List className="projects" grid={{gutter: 25,column: 4}} >
