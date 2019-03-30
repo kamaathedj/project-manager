@@ -1,14 +1,11 @@
-from rest_framework.generics import ListAPIView ,RetrieveAPIView 
-from .serializers import projectSerializer
+from rest_framework import viewsets
 from projects.models import projects
+from .serializers import projectSerializer
 
 
-class projectListView(ListAPIView):
+class projectViewsets(viewsets.ModelViewSet):
+    serializer_class=projectSerializer
     queryset=projects.objects.order_by('-id')
-    serializer_class=projectSerializer
 
 
-class projectDetailView(RetrieveAPIView):
-    queryset=projects.objects.all()
-    serializer_class=projectSerializer
 
