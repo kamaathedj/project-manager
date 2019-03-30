@@ -5,9 +5,13 @@ class Projects extends Component {
 
   render() {
         let projectItems;
+        
         if (this.props.projects) {
           projectItems=this.props.projects.map(project => {
+            
+            
           return(
+           
             <ProjectItems key={project.id} project={project}/>
           );
           });
@@ -15,6 +19,7 @@ class Projects extends Component {
         }
     return (
       <div className="projects">
+      
          {projectItems}
         
       </div>

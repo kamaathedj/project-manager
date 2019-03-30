@@ -15,7 +15,7 @@ class ProjectItem extends Component {
     return (
       <List className="projects" grid={{gutter: 25,column: 4}} >
       <List.Item>
-         <Card style={{marginRight:20}}>
+         <Card style={{marginRight:0}}>
            
             <Meta
             title={this.props.project.title}
@@ -24,7 +24,7 @@ class ProjectItem extends Component {
            <p style={{marginTop:20}}>Updated at : {this.props.project.updated}</p>
            
           <Radio display='block' defaultChecked={this.props.project.done} style={{marginTop:20,width:'100%'}} onClick={doneButton}>Done ?</Radio>  
-          <Button  type="primary"  href='#' style={{marginRight:20,marginTop:20}} onClick={info}>
+          <Button  type="primary"  href={this.props.project.id} style={{marginRight:20,marginTop:20}} onClick={info}>
           <Icon type='right'/>
           Track progress.
           </Button>
