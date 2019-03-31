@@ -18,13 +18,9 @@ class projectList extends Component {
            });
            
            
-         });
-         
-           
+         });         
 
-  }
- 
-  
+  } 
   render() {
       
     return (

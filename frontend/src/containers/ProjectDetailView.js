@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Card,Radio} from 'antd';
+import { Card,Radio,Button,Icon,message} from 'antd';
 
 
 
@@ -9,32 +9,28 @@ class ProjectDetail extends Component {
     state={
       project:{}
     }
+ 
   
   componentDidMount(){
-    const project_id=this.props.match.params.projectID;
-    console.log(project_id);
-    
+    const project_id=this.props.match.params.projectID;  
    axios.get(`http://127.0.0.1:8000/api/${project_id}`)
          .then(resp=>{
            this.setState({
-             project:resp.data
-             
-             
+             project:resp.data  
              
            });
-           
-           console.log(resp.data);
-         });
-         
-           
 
+         });
   }
  
   
   render() {
-    const {Meta}=Card
-      
+        const ondelete=()=>{
+        message.warn(`You have delete this project!`,[3])
+    }
+    const {Meta}=Card   
     return (
+      <div>
           <Card style={{marginRight:20}}>
            
             <Meta
@@ -43,8 +39,15 @@ class ProjectDetail extends Component {
             />
            <p style={{marginTop:20}}>Updated at : {this.state.project.updated}</p>
            
-          <Radio display='block' defaultChecked={this.state.project.done} style={{marginTop:20,width:'100%'}}>Done ?</Radio>     
+          <Radio display='block' defaultChecked={this.state.project.done} style={{marginTop:20,width:'100%'}}>Done ?</Radio> 
+
+           <Button  type="danger" style={{marginRight:20,marginTop:20}} onClick={ondelete} href='/'>
+          <Icon type='delete'/>
+          Delete 
+          </Button>  
          </Card>
+         
+      </div>
     );
   }
 }
