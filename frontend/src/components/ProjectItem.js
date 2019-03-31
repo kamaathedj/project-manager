@@ -24,7 +24,7 @@ class ProjectItem extends Component {
            <p style={{marginTop:20}}>Updated at : {this.props.project.updated}</p>
            
           <Radio display='block' defaultChecked={this.props.project.done} style={{marginTop:20,width:'100%'}} onClick={doneButton}>Done ?</Radio>  
-          <Button  type="primary"  href={this.props.project.id} style={{marginRight:20,marginTop:20}} onClick={info}>
+          <Button href={this.props.project.id} type="primary"  style={{marginRight:20,marginTop:20}} onClick={info}>
           <Icon type='right'/>
           Track progress.
           </Button>

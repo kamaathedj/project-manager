@@ -43,9 +43,7 @@ class ProjectDetail extends Component {
             />
            <p style={{marginTop:20}}>Updated at : {this.state.project.updated}</p>
            
-          <Radio display='block' defaultChecked={this.state.project.done} style={{marginTop:20,width:'100%'}}>Done ?</Radio>  
-          
-          
+          <Radio display='block' defaultChecked={this.state.project.done} style={{marginTop:20,width:'100%'}}>Done ?</Radio>     
          </Card>
     );
   }
