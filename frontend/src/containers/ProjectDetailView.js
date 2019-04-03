@@ -27,7 +27,9 @@ class ProjectDetail extends Component {
   render() {
         const ondelete=()=>{
         message.warn(`You have delete this project!`,[3])
-    }
+        this.props.history.push('/')
+        // this.forceUpdate()
+        }
     const {Meta}=Card   
     return (
       <div>
