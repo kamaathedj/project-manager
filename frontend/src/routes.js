@@ -14,4 +14,3 @@ const BaseRouter=()=>(
 );
 
 export default BaseRouter;
-
