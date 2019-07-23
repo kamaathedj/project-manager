@@ -6,6 +6,7 @@
 /.pnp
 .pnp.js
 
+
 # testing
 /coverage
 
@@ -29,3 +30,6 @@ migrations
 .vscode
 db.sqlite3
 /frontend/node_modules
+
+# vscode
+.vscode 
